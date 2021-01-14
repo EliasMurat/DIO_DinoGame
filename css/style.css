@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    color: #555555;
+}
+
+body {
+    background: #fafafa;
+}
+
+.pontuacao{
+    padding: 10px;
+}
+
+.dino {
+    width: 60px;
+    height: 60px;
+    background-image: url('../sprites/dino.png');
+    background-size: cover;
+    position: absolute;
+    bottom: 10px;
+    margin: 0 0 0 10px;
+}
+
+.cactus {
+    width: 60px;
+    height: 60px;
+    background-image: url('../sprites/cactus.png');
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.game-over {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.game-over .btn {
+    width: 60%;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    border-color: #555555;
+    border-style: dotted;
+    margin-top: 25px;
+    padding: 5px;
+}
+
+.game-over .btn:hover {
+    border-style: dashed;
+    border-color: #000000;
+    color: #000000;
+}
+
+@keyframes sliderigth{
+    from {
+        background-position: 70000%;
+    }
+
+    to {
+        background-position: 0;
+    }
+}
+
+.background {
+    background-image: url('../sprites/background.png');
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0;
+    animation: sliderigth 600s infinite linear;
+    width: 100%;
+    height: 250px;
+}
