@@ -18,7 +18,7 @@ function handleKeyUp(event) {
 function jump() {
     isJumping = true;
     let upInterval = setInterval(() => {
-        if (position >= 160) {
+        if (position >= 180) {
             clearInterval(upInterval);
             let downInterval = setInterval(() => {
                 if (position <= 10) {
@@ -38,7 +38,7 @@ function jump() {
 
 function createCactus() {
     const cactus = document.createElement('div');
-    let cactusPosition = screen.width - 60;
+    let cactusPosition = screen.width - 64;
     let randomTime = Math.random() * 6000;
 
     cactus.classList.add('cactus');
@@ -46,15 +46,14 @@ function createCactus() {
     backgound.appendChild(cactus);
 
     let leftInterval = setInterval(() => {
-        if (cactusPosition < -70) {
+        if (cactusPosition < -64) {
             clearInterval(leftInterval);
             backgound.removeChild(cactus);
             score++;
-            console.log(score);
             document.querySelector('.pontuacao').innerHTML = "SCORE: " + score;
-        } else if (cactusPosition >= 10 && cactusPosition <= 70 && position < 70) {
+        } else if (cactusPosition >= 10 && cactusPosition <= 64 && position < 64) {
             clearInterval(leftInterval);
-            var codHtml = '<div class="game-over"><h1>Fim de jogo!</h1><br><br><p>Parabéns sua pontuação foi: ' + score + '<br><input type="button" class="btn" onClick="resetGame()" value="JOGAR NOVAMENTE"></div>';
+            var codHtml = '<div class="gamebox"><h1>Fim de jogo!</h1><br><p>Parabéns sua pontuação foi: ' + score + '</p><input type="button" class="btn" onClick="resetGame()" value="VOLTAR AO MENU"></div>';
             document.body.innerHTML = codHtml;
         } else {
             cactusPosition -= 10;
@@ -64,10 +63,23 @@ function createCactus() {
     setTimeout(createCactus, randomTime);
 }
 
-function resetGame(){
-    document.location.reload(true);
+function tutorialGame() {
+    var codHtml = '<div class="gamebox"><h2>Tutorial</h2><br><p>- Aperte espaço para pular.</p><input type="button" class="btn" onClick="resetGame()" value="VOLTA AO MENU"></div>';
+    document.body.innerHTML = codHtml;
 }
 
-createCactus();
+function aboutGame() {
+    var codHtml = '<div class="gamebox about"><h2>Sobre</h2><br><p>Projeto desenvolvido no bootcamp "GFT START_UNI 2021 #1", realizado pela DIO com parceria com a GFT, objetivo do projeto foi recriar o jogo do dinossauro do Google quando estamos sem internet.</p><a target="_blank" href="https://github.com/EliasMurat"><input type="button" class="btn" value="GITHUB"></a><a target="_blank" href="https://www.linkedin.com/in/elias-murat-41ba691a8/"><input type="button" class="btn" value="LINKEDIN"></a><input type="button" class="btn" onClick="resetGame()" value="VOLTA AO MENU"></div>';
+    document.body.innerHTML = codHtml;
+}
+
+function resetGame() {
+    document.location.reload();
+}
+
+function startGame() {
+    document.querySelector('.start').style.display = 'none';
+    createCactus();
+}
 
 document.addEventListener('keydown', handleKeyUp);
