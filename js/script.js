@@ -5,7 +5,9 @@ let isJumping = false;
 let position = 10;
 let score = 0;
 
-console.log(score);
+function countTouches(event) {
+    jump();
+}
 
 function handleKeyUp(event) {
     if (event.keyCode === 32) {
