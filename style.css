@@ -5,6 +5,7 @@
     font-family: 'Press Start 2P', cursive;
     color: #555555;
     line-height: 1.5;
+    font-size: 15px;
 }
 
 body {
@@ -81,7 +82,6 @@ body {
     position: absolute;
     right: 32px;
     bottom: 32px;
-    font-size: 32px;
     text-align: center;
     z-index: 999!important;
 }
