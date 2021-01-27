@@ -16,7 +16,7 @@ body {
 }
 
 .background {
-    background-image: url('../sprites/background.png');
+    background-image: url('sprites/background.png');
     background-repeat: repeat-x;
     position: absolute;
     bottom: 0;
@@ -27,7 +27,7 @@ body {
 .dino {
     width: 60px;
     height: 60px;
-    background-image: url('../sprites/dino-run.gif');
+    background-image: url('sprites/dino-run.gif');
     background-size: cover;
     position: absolute;
     bottom: 10px;
@@ -37,7 +37,7 @@ body {
 .cactus {
     width: 60px;
     height: 60px;
-    background-image: url('../sprites/obstacle.png');
+    background-image: url('sprites/obstacle.png');
     background-size: cover;
     position: absolute;
     bottom: 0;
@@ -76,7 +76,7 @@ body {
     display: none;
     width: 60px;
     height: 60px;
-    background-image: url('../sprites/btnJump.png');
+    background-image: url('sprites/btnJump.png');
     background-size: cover;
     position: absolute;
     right: 32px;
