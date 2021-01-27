@@ -5,8 +5,10 @@ let isJumping = false;
 let position = 10;
 let score = 0;
 
-function countTouches(event) {
-    jump();
+function jumpBtn() {
+    if (!isJumping) {
+        jump();
+    }
 }
 
 function handleKeyUp(event) {
@@ -81,6 +83,7 @@ function resetGame() {
 
 function startGame() {
     document.querySelector('.start').style.display = 'none';
+    document.querySelector('.btnJump').style.display = 'block';
     createCactus();
 }
 

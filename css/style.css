@@ -46,7 +46,6 @@ body {
 
 .about p{
     text-align: justify;
-    
 }
 
 .gamebox, .start {
@@ -57,7 +56,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.btn {
+.btn, .btnJump {
     width: 100%;
     height: 40px;
     cursor: pointer;
@@ -71,4 +70,18 @@ body {
 
 .btn:hover {
     border-style: dashed;
+}
+
+.btnJump{
+    display: none;
+    width: 60px;
+    height: 60px;
+    background-image: url('../sprites/btnJump.png');
+    background-size: cover;
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    font-size: 32px;
+    text-align: center;
+    z-index: 999!important;
 }
