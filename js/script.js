@@ -68,7 +68,7 @@ function createCactus() {
 }
 
 function tutorialGame() {
-    var codHtml = '<div class="gamebox"><h2>Tutorial</h2><br><p>- Aperte espaço para pular.</p><input type="button" class="btn" onClick="resetGame()" value="VOLTA AO MENU"></div>';
+    var codHtml = '<div class="gamebox"><h2>Tutorial</h2><br><p>-Aperte espaço para pular.</p><p>-Se estiver no modo mobile aperte o botão no canto direito inferior.</p><input type="button" class="btn" onClick="resetGame()" value="VOLTA AO MENU"></div>';
     document.body.innerHTML = codHtml;
 }
 
